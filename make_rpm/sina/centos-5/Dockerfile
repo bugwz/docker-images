@@ -4,10 +4,8 @@ COPY ./files/ /etc/yum.repos.d/
 RUN cd /etc/yum.repos.d \
     && rm -f CentOS-Sources.repo CentOS-Debuginfo.repo CentOS-Media.repo CentOS-Vault.repo \
     && yum install -y @buildsys-build wget automake libtool gcc gcc-c++ curl curl-devel make rsync tcl which build-essential tk gettext zlib-devel openssl-devel pcre-devel rpm-build \
-    && yum localinstall -y --nogpgcheck /etc/yum.repos.d/devtoolset-2-binutils-2.23.52.0.1-10.el5.x86_64.rpm \
-    && yum localinstall -y --nogpgcheck /etc/yum.repos.d/devtoolset-2-gcc-4.8.2-15.el5.x86_64.rpm \
-    && yum localinstall -y --nogpgcheck /etc/yum.repos.d/devtoolset-2-gcc-c++-4.8.2-15.el5.x86_64.rpm \
-    && rm -f /etc/yum.repos.d/devtoolset-2-binutils-2.23.52.0.1-10.el5.x86_64.rpm /etc/yum.repos.d/devtoolset-2-gcc-4.8.2-15.el5.x86_64.rpm /etc/yum.repos.d/devtoolset-2-gcc-c++-4.8.2-15.el5.x86_64.rpm \
+    && yum localinstall -y --nogpgcheck devtoolset-2-binutils-2.23.52.0.1-10.el5.x86_64.rpm devtoolset-2-gcc-4.8.2-15.el5.x86_64.rpm devtoolset-2-gcc-c++-4.8.2-15.el5.x86_64.rpm \
+    && rm -f devtoolset-2-binutils-2.23.52.0.1-10.el5.x86_64.rpm devtoolset-2-gcc-4.8.2-15.el5.x86_64.rpm devtoolset-2-gcc-c++-4.8.2-15.el5.x86_64.rpm \
     && ln -s /opt/rh/devtoolset-2/root/usr/bin/* /usr/local/bin/ \
     && hash -r \
     && mkdir /data0 \
