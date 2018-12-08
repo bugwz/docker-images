@@ -1,0 +1,8 @@
+#CentOS-fasttrack.repo
+
+[fasttrack]
+name=CentOS-7 - fasttrack
+baseurl=http://repos.sina.cn/centos/$releasever/fasttrack/$basearch/
+gpgcheck=0
+enabled=0
+gpgkey=http://repos.sina.cn/centos/RPM-GPG-KEY-CentOS-7

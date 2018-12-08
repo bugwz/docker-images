@@ -1,0 +1,7 @@
+[dsp] 
+name=sinadsp 
+baseurl=http://repos.sina.cn/custom-repos/dsp/centos5/$basearch/ 
+gpgcheck=0 
+enabled=1
+priority=5
+skip_if_unavailable=1

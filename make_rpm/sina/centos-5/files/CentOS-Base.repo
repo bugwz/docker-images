@@ -1,0 +1,38 @@
+# CentOS-Base.repo
+#
+# Since official repositories are gone, use repos.sina.cn/centos-vault instead.
+#
+#
+
+[base]
+name=CentOS-5 - Base
+baseurl=http://repos.sina.cn/centos-vault/5.11/os/$basearch/
+gpgcheck=1
+gpgkey=http://repos.sina.cn/centos/RPM-GPG-KEY-CentOS-5
+
+[updates]
+name=CentOS-5 - Updates
+baseurl=http://repos.sina.cn/centos-vault/5.11/updates/$basearch/
+gpgcheck=1
+gpgkey=http://repos.sina.cn/centos/RPM-GPG-KEY-CentOS-5
+
+[extras]
+name=CentOS-5 - Extras
+baseurl=http://repos.sina.cn/centos-vault/5.11/extras/$basearch/
+gpgcheck=1
+gpgkey=http://repos.sina.cn/centos/RPM-GPG-KEY-CentOS-5
+
+[centosplus]
+name=CentOS-5 - Plus
+baseurl=http://repos.sina.cn/centos-vault/5.11/centosplus/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=http://repos.sina.cn/centos/RPM-GPG-KEY-CentOS-5
+
+[contrib]
+name=CentOS-5 - Contrib
+baseurl=http://repos.sina.cn/centos-vault/5.11/contrib/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=http://repos.sina.cn/centos/RPM-GPG-KEY-CentOS-5
+
